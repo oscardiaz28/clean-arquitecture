@@ -1,12 +1,11 @@
-import { User } from "./User";
-import { UserId } from "./vo/UserId";
+import { User } from "../../model/User";
 
 export interface UserRepository {
     save(user: User): Promise<void>;
     findAll(): Promise<User[]>;
-    findById(id: UserId): Promise<User | null>;
+    findById(id: number): Promise<User | null>;
     findByEmail(email: string): Promise<User | null>;
     update(user: User): Promise<void>;
-    delete(id: string): Promise<void>;
+    delete(id: number): Promise<void>;
 }
 

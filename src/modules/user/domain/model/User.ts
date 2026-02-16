@@ -1,12 +1,13 @@
+import { Name } from "./vo/Name";
 import { UserId } from "./vo/UserId";
 
 export class User{
     id: UserId;
-    name: string;
+    name: Name;
     email: string;
     createdAt: Date
 
-    constructor(id: UserId, name: string, email: string, createdAt: Date){
+    constructor(id: UserId, name: Name, email: string, createdAt: Date){
         this.id = id;
         this.name = name;
         this.email = email;
