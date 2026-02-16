@@ -8,7 +8,6 @@ export class UserCreate{
 
     async execute(id: number, name: string, email: string, createdAt: Date): Promise<void> {
         const user = new User(new UserId(id), new Name(name), email, createdAt);
-
         await this.userRepository.save(user);
     }
 
